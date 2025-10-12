@@ -15,12 +15,12 @@ const handleAddEntry = () => {
 </script>
 
 <template>
-    <div class="bg-surface-0 dark:bg-surface-950 px-6 py-5 md:px-12 lg:px-20">
+    <div class="bg-surface-0 dark:bg-surface-950 md:px-12 lg:px-20">
         <div class="text-surface-700 dark:text-surface-100 text-center flex flex-col items-center gap-4">
             <div class="text-surface-900 dark:text-surface-0 font-bold text-4xl leading-tight">Storage</div>
         </div>
 
-        <div class="max-w-lg mx-auto mt-5 bg-white">
+        <div class="max-w-lg mx-auto mt-5">
             <!-- Форма ввода данных -->
             <div class="flex gap-4 mb-6">
                 <input
@@ -36,7 +36,7 @@ const handleAddEntry = () => {
                 <button
                     @click="handleAddEntry"
                     :disabled="!newKey || !newValue"
-                    class="p-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:bg-gray-400 transition cursor-pointer"
+                    class="flex-1 p-1 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:bg-gray-400 transition cursor-pointer"
                 >
                     Save
                 </button>
@@ -51,7 +51,7 @@ const handleAddEntry = () => {
                         class="flex justify-between items-center bg-gray-50 p-3 rounded shadow-sm"
                     >
                     <span>
-                      <strong>{{ key }}</strong>:
+                      <strong class="text-gray-600">{{ key }}</strong>:
                       <span class="text-gray-600">{{ value }}</span>
                     </span>
                         <button
@@ -63,7 +63,7 @@ const handleAddEntry = () => {
                     </li>
                 </ul>
             </div>
-            <p v-else class="text-center text-gray-500 mt-4">No data found.</p>
+            <p v-else class="text-center mt-4">No data found.</p>
         </div>
     </div>
 

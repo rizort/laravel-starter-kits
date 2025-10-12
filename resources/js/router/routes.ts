@@ -5,11 +5,15 @@ const routes = [
     },
     {
         path: '/demo/storage',
-        component: () => import('@/components/demo/Storage.vue')
+        component: () => import('@/demo/components/Storage.vue')
     },
     {
         path: '/demo/locale',
-        component: () => import('@/components/demo/Locale.vue')
+        component: () => import('@/demo/components/Locale.vue')
+    },
+    {
+        path: '/demo/components',
+        component: () => import('@/demo/components/Components.vue')
     },
     {
         path: "/:notFound",
